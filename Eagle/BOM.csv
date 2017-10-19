@@ -1,0 +1,13 @@
+"Part";"Value";"Device";"Package";"Description";"PROD_ID";"SF_SKU";"VALUE";
+"BT1";"";"BATTERY-20MM_SMD_4LEGS";"BATTCON_20MM_4LEGS";"Battery - Single Cell";"BATT-10373";"PRT-11892";"";
+"C1";"0.1uf";"C-EUC0805";"C0805";"CAPACITOR, European symbol";"";"";"";
+"FD1";"FIDUCIAL1X2";"FIDUCIAL1X2";"FIDUCIAL-1X2";"Fiducial Alignment Points";"";"";"";
+"FD2";"FIDUCIAL1X2";"FIDUCIAL1X2";"FIDUCIAL-1X2";"Fiducial Alignment Points";"";"";"";
+"HM-10";"HM-10-BOARD";"HM-10-BOARD";"26.9X13X2.2_BOARD";"HM Bluetooth module use TI CC2540 or CC2541, Master and slave roles in one, transmission version and remote control version and PIO state acquisition functions in one, Support the AT command modify module parameters, Convenient and flexible.";"";"";"";
+"IO";"";"PINHD-1X3";"1X03";"PIN HEADER";"";"";"";
+"PRG";"";"PINHD-1X3";"1X03";"PIN HEADER";"";"";"";
+"PWR";"";"PINHD-1X2";"1X02";"PIN HEADER";"";"";"";
+"Q1";"2N3904";"TRANSISTOR_NPNMMBT2222A";"SOT23-3";"Generic NPN BJT";"TRANS-08049";"";"MMBT2222A";
+"R1";"100";"100OHM-1/4W-5%(0603)";"0603-RES";"";"RES-12438";"";"100/.25W";
+"R2";"100";"100OHM-1/4W-5%(0603)";"0603-RES";"";"RES-12438";"";"100/.25W";
+"UART";"";"PINHD-1X2";"1X02";"PIN HEADER";"";"";"";
