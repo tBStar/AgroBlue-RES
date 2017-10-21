@@ -89,11 +89,20 @@ More info on the upgrading process, visit http://www.jnhuamao.cn/
 In Summary:
 -----------
 I thank all the sponsors that made this contest possible. Special thanks to Sparkfun for their gratuitous dev board. I made mamy mistakes a long the way but the experience and sense of accomplishment was beyond what I imagined. I hope my work can pave the way for a continuation for finding inovative ways to improve on my design to make the world a better place.
+Res stands for resistive, the probes can corrode very easily which will require replacement. As is this iteration can only be used indoor. I've done current consumption readings:
+Sleep mode: 20uA
+Advertising: 80uA
+Connected: 8mA
+Moisture Sensing: ~100mA
+I found out very inefficient compared to capacitive sensing which can consume about 5mA while sensing. Very interesting indeed.
+
+Also, to harness the full power of any BLE module is to be able to program it myself. Most of the advanced BLE modules use a flavor of ARM Cortex M processors, since they are engineered for maximum power efficiency, it makes them the rightful candidates for my next project which will be called AgroBlue-Cap.
+For outdoor usage, I highly recommend you apply silicone conformal coating because the module as is can be easily damaged by environmental elements. Ideally, I would enclose the circuitry in a water/moisture proof box and use an external antenna.
 
 Tidbits:
 --------
-- Sparkfun originally shipped the wrong module, it was the WiFi Module - ESP8266 but was handled professionally.
+- Sparkfun originally shipped the wrong Wifi module. They later shipped the correct one, since it was a mistake, they let me keep both.
 - OshPark upgraded my order to the express service for free which costs double and take a lot less, so thank you OshPark.
 - The datasheet provided by JNHuaMao Technology Company has a serious mistake. PIN3 is listed as ADC compatible while it wasn't. So bonded PIN4 to it for immediate fix, the schematics has been corrected.
 - Since I was rushing to get the project out, I accidently exposed my cayenne/wifi credentials. A fatal mistake but I got a good laugh at it, so always double check and don't rush.
-- I am a first timer on any contest, github, eagle, board fabrication, smd soldering, youtube publishing and video recording. Quite a story there.
+- I am a first timer on all levels, contest, github, eagle, board fabrication, smd soldering, youtube publishing and video recording. Quite a story there.
