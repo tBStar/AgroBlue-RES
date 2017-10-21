@@ -32,32 +32,42 @@ If you've gotten yourself some HM-10 clones, fear not. The following is an effec
   ![image](Arduino/Firmware/BLE_Firmware_Hookup.jpg)
 3. Use CCLoader.exe to load the CC2541hm10v540.bin to the UNO board and the board will burn the firmware to the BLE Mini.
 
-3rd Step: (Configure the BLE Module Slave)
---------------------------------------------------
+3rd Step: (Configure BLE Modules Master/Slave)
+----------------------------------------------
+
+a) Slave:
 Upload an empty sketch to Aruidno and hookup the sensor module with it like this:
 
-BLE Sensor		Arduino
-TX 		<---->	TX
-RX  	<---->  RX
-GND 	<---->  GND
-VCC 	<---->  3.3V
+HM-10||Arduino
+|---|---|---|
+TX|<---->|TX
+RX|<---->|RX
+GND|<---->|GND
+VCC|<---->|3.3V
 
 Open the serial and type the following command to switch the mode of transmission to remote:
-AT+MODE2
+AT+MODE2: Remote Control Mode
+AT+ROLE0: Peripheral Mode (Default)
+AT+PWRM0: Auto Sleep
+AT+ADVIF: Set the advertising interval to 7s (MAX)
+AT+NAMEXXXXX: Where XXX is your preferred name
+AT+RESET: Restart module
 
 
-4rd Step: (Configure the BLE Module Master)
---------------------------------------------------
+b) Master
 Hook up the BLE Module Breakout board the same way as the Sensor per below and type the following commands:
 
-BLE Breakout		Arduino
-TX 			<---->	TX
-RX  		<---->  RX
-GND 		<---->  GND
-VCC 		<---->  3.3V
-
 On master side:
-1. AT+RENEW
-2. AT+IMME1
-3. AT+ROLE1
-4. AT+RESET
+AT+RENEW: Restore all setup value to factory setup
+AT+IMME1: Only respond the AT Commands
+AT+ROLE1: Central/Master Mode
+AT+NAMEXXXXX: Where XXX is your preferred name
+AT+RESET: Restart module
+
+c) Upgrade firmware on genuine BLE module (Optional)
+AT+VERR?: Will give you the version
+For example, you need to be at least at V526 for analog support.
+
+**HM-10** is designed and made by **JNHuaMao Technology Company**
+More info on the upgrading process, visit http://www.jnhuamao.cn/
+
