@@ -43,7 +43,10 @@ GND 	<---->  GND
 VCC 	<---->  3.3V
 
 Open the serial and type the following command to switch the mode of transmission to remote:
-AT+MODE2
+AT+MODE2: Remote Control Mode
+AT+ROLE0: Peripheral Mode (Default)
+AT+PWRM0: Auto Sleep
+AT+ADVIF: Set the advertising interval to 7s
 
 
 4rd Step: (Configure the BLE Module Master)
@@ -57,7 +60,7 @@ GND 		<---->  GND
 VCC 		<---->  3.3V
 
 On master side:
-1. AT+RENEW
-2. AT+IMME1
-3. AT+ROLE1
-4. AT+RESET
+1. AT+RENEW: Restore all setup value to factory setup
+2. AT+IMME1: Only respond the AT Commands
+3. AT+ROLE1: Central/Master Mode
+4. AT+RESET: Restart module
