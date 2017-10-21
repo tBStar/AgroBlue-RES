@@ -23,8 +23,8 @@ I used https://oshpark.com/ for my fabrication shop because I heard so many posi
 |x 1|HM-10 BLE Module|https://www.aliexpress.com/item/HM-10-cc2541-4-0-BLE-bluetooth-to-uart-transceiver-Module-Central-Peripheral-switching-iBeacon-AirLocate/32460585727.html|$3.34|
 |x 1|HM-10 BLE Module Breakout Board|https://www.aliexpress.com/item/Free-shipping-HM-10-Bluetooth-BLE-4-0-Module-transparent-serial-port-Bluetooth-4-0-module/1913999168.html|$4.75|
 
-2nd Step:(Optional if you have BLE Module Clones):
---------------------------------------------------
+2nd Step:(Optional if you have BLE Module Clones)
+-------------------------------------------------
 If you've gotten yourself some HM-10 clones, fear not. The following is an effective way to upload the original firmware to the module. We are going to be using v540. the original files can be found here: https://github.com/RedBearLab/CCLoader.
 
 1. Load the CCLoader Arduino sketch to the UNO board.
@@ -50,7 +50,8 @@ AT+MODE2: Remote Control Mode
 AT+ROLE0: Peripheral Mode (Default)
 AT+PWRM0: Auto Sleep
 AT+ADVIF: Set the advertising interval to 7s (MAX)
-AT+NAMEXXXXX: Where XXX is your preferred name
+AT+NAMEXXX: Where XXX is your preferred name
+AT+BAUD4: Set the baud rate to 115200
 AT+RESET: Restart module
 
 
@@ -61,7 +62,8 @@ On master side:
 AT+RENEW: Restore all setup value to factory setup
 AT+IMME1: Only respond the AT Commands
 AT+ROLE1: Central/Master Mode
-AT+NAMEXXXXX: Where XXX is your preferred name
+AT+NAMEXXX: Where XXX is your preferred name
+AT+BAUD4: Set the baud rate to 115200
 AT+RESET: Restart module
 
 c) Upgrade firmware on genuine BLE module (Optional)
@@ -71,3 +73,15 @@ For example, you need to be at least at V526 for analog support.
 **HM-10** is designed and made by **JNHuaMao Technology Company**
 More info on the upgrading process, visit http://www.jnhuamao.cn/
 
+4th Step: (Getting the ESP8266 Dev Ready)
+-----------------------------------------
+	1- Make sure you hookup the BLE Central/Master with the ESP8266 per below because we will be using SoftSerial library.
+	![image](Fritzing/BLECentralHookup.jpg)
+	
+	2- Use your Cayenne/Wifi credentials and upload main.ino located in Arduino/Code folder to the ESP8266. Open the serial and set it the baud rate to match your BLE Central.
+	
+	3- Alternatively, you can use CentalBLEConfig.ino for debuging purposes. The code echos the serial input to the BLE and vice versa.
+	
+	4- I found hooking up a lipo battery to the Slave BLE module works best because I found 3.3V is unusually lower for this kind of circuit. Make sure you don't hookup the cell and the lipo at the same time. There is no reverse current protection.
+	
+	5- Water your plan and you should see some reading coming through your cloud interface.
