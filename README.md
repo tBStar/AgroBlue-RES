@@ -84,4 +84,16 @@ More info on the upgrading process, visit http://www.jnhuamao.cn/
 	
 4- I found hooking up a lipo battery to the Slave BLE module works best because I found 3.3V is unusually lower for this kind of circuit. Make sure you don't hookup the cell and the lipo at the same time. There is no reverse current protection.
 	
-5- Water your plan and you should see some reading coming through your cloud interface.
+5- Water your plan and you should see some reading coming through your cloud interface through channel 0.
+
+In Summary:
+-----------
+I thank all the sponsors that made this contest possible. Special thanks to Sparkfun for their gratuitous dev board. I made mamy mistakes a long the way but the experience and sense of accomplishment was beyond what I imagined. I hope my work can pave the way for a continuation for finding inovative ways to improve on my design to make the world a better place.
+
+Tidbits:
+--------
+- Sparkfun originally shipped the wrong module, it was the WiFi Module - ESP8266 but was handled professionally.
+- OshPark upgraded my order to the express service for free which costs double and take a lot less, so thank you OshPark.
+- The datasheet provided by JNHuaMao Technology Company has a serious mistake. PIN3 is listed as ADC compatible while it wasn't. So bonded PIN4 to it for immediate fix, the schematics has been corrected.
+- Since I was rushing to get the project out, I accidently exposed my cayenne/wifi credentials. A fatal mistake but I got a good laugh at it, so always double check and don't rush.
+- I am a first timer on any contest, github, eagle, board fabrication, smd soldering, youtube publishing and video recording. Quite a story there.
