@@ -75,13 +75,13 @@ More info on the upgrading process, visit http://www.jnhuamao.cn/
 
 4th Step: (Getting the ESP8266 Dev Ready)
 -----------------------------------------
-	1- Make sure you hookup the BLE Central/Master with the ESP8266 per below because we will be using SoftSerial library.
+1- Make sure you hookup the BLE Central/Master with the ESP8266 per below because we will be using SoftSerial library.
 	![image](Fritzing/BLECentralHookup.jpg)
 	
-	2- Use your Cayenne/Wifi credentials and upload main.ino located in Arduino/Code folder to the ESP8266. Open the serial and set it the baud rate to match your BLE Central.
+2- Use your Cayenne/Wifi credentials and upload main.ino located in Arduino/Code folder to the ESP8266. Open the serial and set it the baud rate to match your BLE Central.
 	
-	3- Alternatively, you can use CentalBLEConfig.ino for debuging purposes. The code echos the serial input to the BLE and vice versa.
+3- Alternatively, you can use CentalBLEConfig.ino for debuging purposes. The code echos the serial input to the BLE and vice versa.
 	
-	4- I found hooking up a lipo battery to the Slave BLE module works best because I found 3.3V is unusually lower for this kind of circuit. Make sure you don't hookup the cell and the lipo at the same time. There is no reverse current protection.
+4- I found hooking up a lipo battery to the Slave BLE module works best because I found 3.3V is unusually lower for this kind of circuit. Make sure you don't hookup the cell and the lipo at the same time. There is no reverse current protection.
 	
-	5- Water your plan and you should see some reading coming through your cloud interface.
+5- Water your plan and you should see some reading coming through your cloud interface.
