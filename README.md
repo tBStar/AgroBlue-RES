@@ -86,6 +86,8 @@ More info on the upgrading process, visit http://www.jnhuamao.cn/
 	
 5- Water your plan and you should see some reading coming through your cloud interface through channel 0.
 
+![image](Arduino/Code/Cayenne.jpg)
+
 In Summary:
 -----------
 I thank all the sponsors that made this contest possible. Special thanks to Sparkfun for their gratuitous dev board. I made mamy mistakes a long the way but the experience and sense of accomplishment was beyond what I imagined. I hope my work can pave the way for a continuation for finding inovative ways to improve on my design to make the world a better place.
